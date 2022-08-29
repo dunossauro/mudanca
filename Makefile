@@ -1,0 +1,3 @@
+lint:
+	blue . --check
+	mypy .

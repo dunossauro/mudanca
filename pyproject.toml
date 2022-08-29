@@ -10,6 +10,7 @@ parsel = "^1.6.0"
 httpx = "^0.23.0"
 
 [tool.poetry.dev-dependencies]
+blue = "^0.9.1"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

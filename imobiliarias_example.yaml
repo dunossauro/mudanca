@@ -1,0 +1,10 @@
+imobiliarias:
+  - nome: sadasd
+    search_url: 'https://'
+    base_url: 'https://'
+    css:
+      cards: 'div.resultado_'
+      href: 'a::attr("href")'
+      title: 'h1.titulo::text'
+      price: 'div.valor > h4::text'
+      desc: 'div.descricao_imovel > div.texto::text'

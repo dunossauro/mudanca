@@ -10,15 +10,20 @@ parsel = "^1.6.0"
 httpx = "^0.23.0"
 dataclass-wizard = "^0.22.1"
 PyYAML = "^6.0"
+loguru = "^0.6.0"
 
 [tool.poetry.dev-dependencies]
 blue = "^0.9.1"
 mypy = "^0.971"
+isort = "^5.10.1"
 
 [tool.mypy]
 python_version = "3.10"
 show_error_codes = true
 ignore_missing_imports = true
+
+[tool.isort]
+multi_line_output = 3
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

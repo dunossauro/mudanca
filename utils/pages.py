@@ -7,6 +7,7 @@ from .headers import headers
 
 client = Client(headers=headers, timeout=None)
 
+
 @dataclass
 class Selectors:
     href: str
@@ -24,7 +25,9 @@ def cards(content_url: str, cards_selector: str) -> list[Selector]:
     return sel.css(cards_selector)
 
 
-def card_page(card: Selector, selector: str, base_url: str) -> tuple[Selector, str]:
+def card_page(
+    card: Selector, selector: str, base_url: str
+) -> tuple[Selector, str]:
     card_url: str = card.css(selector).get()
     final_url = f'{base_url}{card_url}'
     response = client.get(final_url)
@@ -50,9 +53,4 @@ def card_data(card: Selector, selectors: Selectors) -> dict[str, str]:
     price = card_price(card_sel, selectors.price)
     desc = card_desc(card_sel, selectors.desc)
 
-    return {
-        'titulo': title,
-        'descricao': desc,
-        'preco': price,
-        'url': url
-    }
+    return {'titulo': title, 'descricao': desc, 'preco': price, 'url': url}

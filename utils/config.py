@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from dataclass_wizard import YAMLWizard
 
 
@@ -13,7 +14,7 @@ class CSS:
 
 @dataclass
 class Imobiliaria:
-    nome: str
+    name: str
     base_url: str
     search_url: str
     css: CSS
